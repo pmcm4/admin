@@ -1,0 +1,36 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Users\pmora\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add @material-ui/datagrid
+
+PATH: 
+  C:\Program Files (x86)\Razer Chroma SDK\bin;C:\Program Files\Razer Chroma SDK\bin;C:\Program Files (x86)\Razer\ChromaBroadcast\bin;C:\Program Files\Razer\ChromaBroadcast\bin;C:\Program Files\Java\jdk1.8.0_201\bin;C:\Windows\system32\config\systemprofile\AppData\Local\Microsoft\WindowsApps;C:\Program Files\nodejs\;C:\Users\pmora\AppData\Local\Microsoft\WindowsApps;C:\Users\pmora\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files (x86)\Inno Setup 6;C:\Users\pmora\AppData\Roaming\npm;C:\Windows\System32;"C:\Windows\system32;C:\Windows;C:\Windows\System32\wbem;";C:\Program Files\Git\cmd;C:\Users\pmora\AppData\Local\Microsoft\WindowsApps;C:\Users\pmora\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files (x86)\Inno Setup 6;C:\Users\pmora\AppData\Roaming\npm;C:\Windows\System32;"C:\Windows\system32;C:\Windows;C:\Windows\System32\wbem;";
+
+Yarn version: 
+  1.22.18
+
+Node version: 
+  16.14.2
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: https://registry.yarnpkg.com/@material-ui%2fdatagrid: Not found
+      at Request.params.callback [as _callback] (C:\Users\pmora\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:66138:18)
+      at Request.self.callback (C:\Users\pmora\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:140883:22)
+      at Request.emit (node:events:526:28)
+      at Request.<anonymous> (C:\Users\pmora\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:141855:10)
+      at Request.emit (node:events:526:28)
+      at IncomingMessage.<anonymous> (C:\Users\pmora\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:141777:12)
+      at Object.onceWrapper (node:events:645:28)
+      at IncomingMessage.emit (node:events:538:35)
+      at endReadableNT (node:internal/streams/readable:1345:12)
+      at processTicksAndRejections (node:internal/process/task_queues:83:21)
+
+npm manifest: 
+  No manifest
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
