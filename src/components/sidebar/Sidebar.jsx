@@ -1,46 +1,32 @@
-import "./sidebar.css";
 import {
-  LineStyle,
-  Timeline,
-  TrendingUp,
-  PermIdentity,
-  Storefront,
-  AttachMoney,
-  BarChart,
-  MailOutline,
-  DynamicFeed,
-  ChatBubbleOutline,
-  WorkOutline,
-  Report,
+  AddCircleOutlineOutlined, AttachMoney,
+  BarChart, ChatBubbleOutline, DynamicFeed, ExitToAppOutlined, ExitToAppSharp, LineStyle, MailOutline, PermIdentity, Receipt, ReceiptOutlined, Report, Storefront, Timeline,
+  TrendingUp, WorkOutline
 } from "@material-ui/icons";
 import { Link } from "react-router-dom";
+import "./sidebar.css";
+import { useDispatch, useSelector } from "react-redux";
+import { logout } from "../../redux/userRedux";
+
 
 export default function Sidebar() {
+  const user = useSelector(state=>state.user.currentUser);
+  const dispatch = useDispatch()
+  const handleLogout = () => {
+    dispatch(logout())
+  }
+  console.log(user)
   return (
     <div className="sidebar">
       <div className="sidebarWrapper">
         <div className="sidebarMenu">
-          <h3 className="sidebarTitle">Dashboard</h3>
           <ul className="sidebarList">
             <Link to="/" className="link">
-            <li className="sidebarListItem active">
+            <li className="sidebarListItem">
               <LineStyle className="sidebarIcon" />
               Home
             </li>
             </Link>
-            <li className="sidebarListItem">
-              <Timeline className="sidebarIcon" />
-              Analytics
-            </li>
-            <li className="sidebarListItem">
-              <TrendingUp className="sidebarIcon" />
-              Sales
-            </li>
-          </ul>
-        </div>
-        <div className="sidebarMenu">
-          <h3 className="sidebarTitle">Quick Menu</h3>
-          <ul className="sidebarList">
             <Link to="/users" className="link">
               <li className="sidebarListItem">
                 <PermIdentity className="sidebarIcon" />
@@ -53,48 +39,24 @@ export default function Sidebar() {
                 Products
               </li>
             </Link>
+            <Link to="/newproduct" className="link">
+              <li className="sidebarListItem">
+                <AddCircleOutlineOutlined className="sidebarIcon" />
+                Add Product
+              </li>
+            </Link>
+            <Link to="/orders" className="link" >
+              <li className="sidebarListItem">
+                <ReceiptOutlined className="sidebarIcon" />
+                Orders
+              </li>
+            </Link>
+            <Link onClick={() => handleLogout(dispatch)} className="link">
             <li className="sidebarListItem">
-              <AttachMoney className="sidebarIcon" />
-              Transactions
-            </li>
-            <li className="sidebarListItem">
-              <BarChart className="sidebarIcon" />
-              Reports
-            </li>
-          </ul>
-        </div>
-        <div className="sidebarMenu">
-          <h3 className="sidebarTitle">Notifications</h3>
-          <ul className="sidebarList">
-            <li className="sidebarListItem">
-              <MailOutline className="sidebarIcon" />
-              Mail
-            </li>
-            <li className="sidebarListItem">
-              <DynamicFeed className="sidebarIcon" />
-              Feedback
-            </li>
-            <li className="sidebarListItem">
-              <ChatBubbleOutline className="sidebarIcon" />
-              Messages
-            </li>
-          </ul>
-        </div>
-        <div className="sidebarMenu">
-          <h3 className="sidebarTitle">Staff</h3>
-          <ul className="sidebarList">
-            <li className="sidebarListItem">
-              <WorkOutline className="sidebarIcon" />
-              Manage
-            </li>
-            <li className="sidebarListItem">
-              <Timeline className="sidebarIcon" />
-              Analytics
-            </li>
-            <li className="sidebarListItem">
-              <Report className="sidebarIcon" />
-              Reports
-            </li>
+              <ExitToAppSharp  className="sidebarIcon" style={{color:"#59302d"}} />
+              Logout
+          </li>
+        </Link>
           </ul>
         </div>
       </div>

@@ -7,14 +7,15 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  color: #BF4124;
 }
 
 .productAddButton {
   width: 80px;
   border: none;
   padding: 5px;
-  background-color: teal;
-  color: white;
+  background-color: #CED9BF;
+  color: #59302D;
   border-radius: 5px;
   font-size: 16px;
   cursor: pointer;
@@ -77,34 +78,38 @@
 .productForm {
   display: flex;
   justify-content: space-between;
+  height: 290px;
 }
 
-.productFormLeft {
+.productFormLeft, .productFormCenter {
+  display: flex;
+  flex-direction: column;
+}
+.productFormLeft > div, .productFormCenter > div {
   display: flex;
   flex-direction: column;
 }
 
-.productFormLeft > label {
+.productFormLeft > label, .productFormCenter > label {
   margin-bottom: 10px;
-  color: gray;
+  color: #59302D;
 }
 
-.productFormLeft > input {
+.productFormLeft > input, .productFormCenter > input {
   margin-bottom: 10px;
   border: none;
   padding: 5px;
   border-bottom: 1px solid gray;
 }
-
-.productFormLeft >select{
-  margin-bottom: 10px;
+.colorPicker {
+  margin: 5px 0;
 }
 
 .productUploadImg{
-  width: 100px;
-  height: 100px;
+  max-width: 100px;
+  max-height: 100px;
   border-radius: 10px;
-  object-fit: cover;
+  object-fit: contain;
   margin-right: 20px;
 }
 
@@ -123,8 +128,8 @@
   border: none;
   padding: 5px;
   border-radius: 5px;
-  background-color: darkblue;
-  color:white;
+  background-color: #CED9BF;
+  color:#59302D;
   font-weight: 600;
   cursor: pointer;
 }

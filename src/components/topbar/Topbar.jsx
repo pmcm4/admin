@@ -1,27 +1,26 @@
 import React from "react";
 import "./topbar.css";
 import { NotificationsNone, Language, Settings } from "@material-ui/icons";
+import { Link } from "react-router-dom";
+import styled from "styled-components";
+
+const Logo = styled.img`
+  position: relative; 
+  top: 3px;
+  right: -20px;
+  width: 175px;
+  height: 50px;
+  cursor: pointer;
+`
 
 export default function Topbar() {
   return (
     <div className="topbar">
       <div className="topbarWrapper">
         <div className="topLeft">
-          <span className="logo">lamaadmin</span>
-        </div>
-        <div className="topRight">
-          <div className="topbarIconContainer">
-            <NotificationsNone />
-            <span className="topIconBadge">2</span>
-          </div>
-          <div className="topbarIconContainer">
-            <Language />
-            <span className="topIconBadge">2</span>
-          </div>
-          <div className="topbarIconContainer">
-            <Settings />
-          </div>
-          <img src="https://images.pexels.com/photos/1526814/pexels-photo-1526814.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="" className="topAvatar" />
+        <Link to= "/">
+                <Logo onClick="/" src= "https://res.cloudinary.com/dgb2lnz2i/image/upload/v1650882286/ADMIN_LOGO_enuqfp.png"  />
+                </Link>
         </div>
       </div>
     </div>

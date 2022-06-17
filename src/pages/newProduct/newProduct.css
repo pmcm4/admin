@@ -14,7 +14,7 @@
 }
 
 .addProductItem > label {
-  color: gray;
+  color: #59302D;
   font-weight: 600;
   margin-bottom: 10px;
 }
@@ -32,8 +32,11 @@
   padding: 7px 10px;
   border: none;
   border-radius: 10px;
-  background-color: darkblue;
-  color: white;
+  background-color: rgba(206, 217, 191, 1);
+  color: #59302D;
   font-weight: 600;
   cursor: pointer;
+}
+.addProductTitle {
+  color: #BF4124;
 }
