@@ -27,6 +27,7 @@ const ProductContainer = styled.div`
   margin: 18px 0; // doit etre enlever
 `
 
+
 const ProductRow = styled.div`
   width: 100%;
   display: flex;
@@ -203,6 +204,7 @@ const onUpdate = (e) => {
               <option value="pending">Pending</option>
               <option value="proccessing">Processing</option>
               <option value="send">Dispatched</option>
+              <option value="refund">Refunded</option>
             </select>
           </ProductRow>
         </ProductContainer>
